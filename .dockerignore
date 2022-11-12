@@ -5,4 +5,3 @@ venv
 .venv
 .ipynb_checkpoints
 __pycache__
-.venv

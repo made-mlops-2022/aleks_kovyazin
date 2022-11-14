@@ -1,4 +1,7 @@
 import pandas as pd
+import sys
+from pathlib import Path
+sys.path.append(f'{Path(__file__).resolve(strict=True).parent}')
 from source.net import NN, Linear, Relu
 from sklearn.model_selection import train_test_split
 import numpy as np
@@ -55,7 +58,7 @@ def plotting(train_losses, val_losses, is_end=False, best_loss=None, best_epoch=
     if is_end:
         plt.show()
 
-def train():
+def train(text):
     try:
         logger.info(conf.TRAIN_FILENAME)
         X, y = read_dataset(conf.TRAIN_FILENAME)
@@ -89,8 +92,9 @@ def train():
         plotting(train_log, val_log, is_end=True, best_epoch=nn.best_epoch, best_loss=nn.best_loss)
     nn.use_best_weights()
     nn.export_nn(conf.MODEL_DATA_PATH)
+    return "Model is done !"
 
-def predict():
+def predict(text):
     try:
         X_test, y_test = read_dataset(conf.TEST_FILENAME)
     except Exception as e:
@@ -104,6 +108,7 @@ def predict():
 
     X_test = nn.scale_transform(X_test)
     logger.info(f'Test loss: {round(nn.loss(X_test, y_test).mean(), 3)}')
+    return f'{round(nn.loss(X_test, y_test).mean(), 3)}'
 
 def main():
 

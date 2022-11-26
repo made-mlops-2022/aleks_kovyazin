@@ -20,17 +20,16 @@
 делает предсказание и записывает их в /data/predictions/{{ ds }}/predictions.csv <br />
 
 4. Вы можете выбрать 2 пути для выполнения ДЗ: <br />
-<br />
 поставить все необходимые пакеты в образ с airflow и использовать BashOperator, PythonOperator (1 балл) ```+1``` <br />
-<br />
 использовать DockerOperator -- тогда выполнение каждой из тасок должно запускаться в собственном контейнере <br />
-<br />
 один из дагов реализован с помощью DockerOperator (5 баллов) <br />
 все даги реализованы только с помощью DockerOperator (пример https://github.com/made-ml-in-prod-2021/airflow-examples/blob/main/dags/11_docker.py). По технике, вы можете использовать такую же структуру как в примере, пакуя в разные докеры скрипты, можете использовать общий докер с вашим пакетом, но с разными точками входа для разных тасок. Прикольно, если вы покажете, что для разных тасок можно использовать разный набор зависимостей (10 баллов) <br />
 https://github.com/made-ml-in-prod-2021/airflow-examples/blob/main/dags/11_docker.py#L27 в этом месте пробрасывается путь с хостовой машины, используйте здесь путь типа /tmp или считывайте из переменных окружения. <br />
-
+<br />
 5. Традиционно, самооценка (1 балл) ```+1``` <br />
-
+<br />
+Итоговое количество баллов: ```22```<br />
+<br />
 ## Running apache airflow 2.0 in docker with local executor.
 Here are the steps to take to get airflow 2.0 running with docker on your machine. 
 1. Clone this repo

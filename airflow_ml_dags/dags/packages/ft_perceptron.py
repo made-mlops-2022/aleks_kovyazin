@@ -43,8 +43,6 @@ def plotting(train_losses, val_losses, is_end=False, best_loss=None, best_epoch=
     # print(is_end, best_loss, best_epoch)
     plt.clf()
     if is_end:
-        assert best_loss is not None and best_epoch is not None, \
-            'Pass the best loss and best epoch to the function'
         first_step = next(i for i, val_loss in enumerate(val_losses) \
                           if val_loss < np.median(val_losses))
         plt.plot([best_epoch], [best_loss], marker='o', markersize=5, color="red")
@@ -143,11 +141,6 @@ def main():
     conf.TEST_FILENAME = args.test_path
     conf.IS_PLOT = args.plot
     conf.LEARNING_RATE = args.learning_rate
-
-    assert 0 < conf.VALID_SIZE < 1
-    assert conf.EPOCHS > 0
-    assert conf.BATCH_SIZE > 0
-    assert conf.LEARNING_RATE > 0
 
     if args.train:
         train()

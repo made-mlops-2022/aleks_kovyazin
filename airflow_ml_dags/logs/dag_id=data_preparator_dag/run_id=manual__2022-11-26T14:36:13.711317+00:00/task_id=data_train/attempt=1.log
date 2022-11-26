@@ -1,0 +1,46 @@
+[2022-11-26T14:41:57.004+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: data_preparator_dag.data_train manual__2022-11-26T14:36:13.711317+00:00 [queued]>
+[2022-11-26T14:41:57.012+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: data_preparator_dag.data_train manual__2022-11-26T14:36:13.711317+00:00 [queued]>
+[2022-11-26T14:41:57.013+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-26T14:41:57.015+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2022-11-26T14:41:57.015+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-26T14:41:57.032+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): data_train> on 2022-11-26 14:36:13.711317+00:00
+[2022-11-26T14:41:57.053+0000] {standard_task_runner.py:55} INFO - Started process 19087 to run task
+[2022-11-26T14:41:57.063+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'data_preparator_dag', 'data_train', 'manual__2022-11-26T14:36:13.711317+00:00', '--job-id', '480', '--raw', '--subdir', 'DAGS_FOLDER/dag_train_process.py', '--cfg-path', '/tmp/tmplraubj4i']
+[2022-11-26T14:41:57.067+0000] {standard_task_runner.py:83} INFO - Job 480: Subtask data_train
+[2022-11-26T14:41:57.201+0000] {task_command.py:376} INFO - Running <TaskInstance: data_preparator_dag.data_train manual__2022-11-26T14:36:13.711317+00:00 [running]> on host 3151441c8efc
+[2022-11-26T14:41:57.358+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_preparator_dag
+AIRFLOW_CTX_TASK_ID=data_train
+AIRFLOW_CTX_EXECUTION_DATE=2022-11-26T14:36:13.711317+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-11-26T14:36:13.711317+00:00
+[2022-11-26T14:41:57.452+0000] {logging_mixin.py:137} INFO - 14
+[2022-11-26T14:42:18.568+0000] {warnings.py:110} WARNING - /opt/***/dags/packages/source/net.py:12: RuntimeWarning: overflow encountered in exp
+  return np.exp(x) / np.sum(np.exp(x), axis=1, keepdims=True)
+
+[2022-11-26T14:42:18.646+0000] {warnings.py:110} WARNING - /opt/***/dags/packages/source/net.py:12: RuntimeWarning: invalid value encountered in true_divide
+  return np.exp(x) / np.sum(np.exp(x), axis=1, keepdims=True)
+
+[2022-11-26T14:42:18.655+0000] {warnings.py:110} WARNING - /opt/***/dags/packages/source/net.py:16: RuntimeWarning: divide by zero encountered in log
+  return -np.mean(np.log(y_pred))
+
+[2022-11-26T14:42:20.299+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/packages/training_process.py", line 64, in trainer
+    nn.export_nn(conf.MODEL_DATA_PATH)
+  File "/opt/airflow/dags/packages/source/net.py", line 147, in export_nn
+    raise e
+  File "/opt/airflow/dags/packages/source/net.py", line 143, in export_nn
+    with open(filename, 'w') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'data/raw/ds/model.json'
+[2022-11-26T14:42:20.430+0000] {taskinstance.py:1406} INFO - Marking task as FAILED. dag_id=data_preparator_dag, task_id=data_train, execution_date=20221126T143613, start_date=20221126T144157, end_date=20221126T144220
+[2022-11-26T14:42:20.498+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 480 for task data_train ([Errno 2] No such file or directory: 'data/raw/ds/model.json'; 19087)
+[2022-11-26T14:42:20.630+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2022-11-26T14:42:20.755+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check

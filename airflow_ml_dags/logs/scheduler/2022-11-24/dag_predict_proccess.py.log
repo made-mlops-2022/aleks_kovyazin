@@ -1,0 +1,80 @@
+[2022-11-24T19:01:38.087+0000] {processor.py:154} INFO - Started process (PID=42) to work on /opt/airflow/dags/dag_predict_proccess.py
+[2022-11-24T19:01:38.100+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag_predict_proccess.py for tasks to queue
+[2022-11-24T19:01:38.103+0000] {logging_mixin.py:137} INFO - [2022-11-24T19:01:38.102+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag_predict_proccess.py
+[2022-11-24T19:01:38.301+0000] {logging_mixin.py:137} INFO - [2022-11-24T19:01:38.291+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/dag_predict_proccess.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_predict_proccess.py", line 3, in <module>
+    from packages.training_process import predictor
+  File "/opt/airflow/dags/packages/training_process.py", line 1, in <module>
+    from sklearn.model_selection import train_test_split
+ModuleNotFoundError: No module named 'sklearn'
+[2022-11-24T19:01:38.303+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_predict_proccess.py
+[2022-11-24T19:01:38.374+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag_predict_proccess.py took 0.302 seconds
+[2022-11-24T19:02:09.355+0000] {processor.py:154} INFO - Started process (PID=100) to work on /opt/airflow/dags/dag_predict_proccess.py
+[2022-11-24T19:02:09.362+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag_predict_proccess.py for tasks to queue
+[2022-11-24T19:02:09.364+0000] {logging_mixin.py:137} INFO - [2022-11-24T19:02:09.364+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag_predict_proccess.py
+[2022-11-24T19:02:09.405+0000] {logging_mixin.py:137} INFO - [2022-11-24T19:02:09.399+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/dag_predict_proccess.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_predict_proccess.py", line 3, in <module>
+    from packages.training_process import predictor
+  File "/opt/airflow/dags/packages/training_process.py", line 1, in <module>
+    from sklearn.model_selection import train_test_split
+ModuleNotFoundError: No module named 'sklearn'
+[2022-11-24T19:02:09.408+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_predict_proccess.py
+[2022-11-24T19:02:09.444+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag_predict_proccess.py took 0.093 seconds
+[2022-11-24T19:03:05.142+0000] {processor.py:154} INFO - Started process (PID=146) to work on /opt/airflow/dags/dag_predict_proccess.py
+[2022-11-24T19:03:05.164+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag_predict_proccess.py for tasks to queue
+[2022-11-24T19:03:05.195+0000] {logging_mixin.py:137} INFO - [2022-11-24T19:03:05.194+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag_predict_proccess.py
+[2022-11-24T19:03:05.891+0000] {logging_mixin.py:137} INFO - [2022-11-24T19:03:05.823+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/dag_predict_proccess.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_predict_proccess.py", line 3, in <module>
+    from packages.training_process import predictor
+  File "/opt/airflow/dags/packages/training_process.py", line 1, in <module>
+    from sklearn.model_selection import train_test_split
+ModuleNotFoundError: No module named 'sklearn'
+[2022-11-24T19:03:05.937+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_predict_proccess.py
+[2022-11-24T19:03:07.429+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag_predict_proccess.py took 2.350 seconds
+[2022-11-24T19:05:01.949+0000] {processor.py:154} INFO - Started process (PID=50) to work on /opt/airflow/dags/dag_predict_proccess.py
+[2022-11-24T19:05:01.957+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag_predict_proccess.py for tasks to queue
+[2022-11-24T19:05:01.970+0000] {logging_mixin.py:137} INFO - [2022-11-24T19:05:01.970+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag_predict_proccess.py
+[2022-11-24T19:05:02.154+0000] {logging_mixin.py:137} INFO - [2022-11-24T19:05:02.125+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/dag_predict_proccess.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_predict_proccess.py", line 3, in <module>
+    from packages.training_process import predictor
+  File "/opt/airflow/dags/packages/training_process.py", line 1, in <module>
+    from sklearn.model_selection import train_test_split
+ModuleNotFoundError: No module named 'sklearn'
+[2022-11-24T19:05:02.164+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_predict_proccess.py
+[2022-11-24T19:05:02.331+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag_predict_proccess.py took 0.414 seconds
+[2022-11-24T19:05:47.090+0000] {processor.py:154} INFO - Started process (PID=75) to work on /opt/airflow/dags/dag_predict_proccess.py
+[2022-11-24T19:05:47.142+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag_predict_proccess.py for tasks to queue
+[2022-11-24T19:05:47.179+0000] {logging_mixin.py:137} INFO - [2022-11-24T19:05:47.179+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag_predict_proccess.py
+[2022-11-24T19:05:47.649+0000] {logging_mixin.py:137} INFO - [2022-11-24T19:05:47.463+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/dag_predict_proccess.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_predict_proccess.py", line 3, in <module>
+    from packages.training_process import predictor
+  File "/opt/airflow/dags/packages/training_process.py", line 1, in <module>
+    from sklearn.model_selection import train_test_split
+ModuleNotFoundError: No module named 'sklearn'
+[2022-11-24T19:05:47.724+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_predict_proccess.py
+[2022-11-24T19:05:48.160+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag_predict_proccess.py took 1.363 seconds

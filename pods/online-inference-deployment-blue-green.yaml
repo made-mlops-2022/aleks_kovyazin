@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: online-inference-deployment-blue-green
+  labels:
+    app: mlp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: mlp
+  strategy: 
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 30%
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: mlp
+    spec:
+      containers:
+      - name: mlp
+        image: krastykovyaz/ft_perceptron-app:0.0.1
+        ports:
+        - containerPort: 80

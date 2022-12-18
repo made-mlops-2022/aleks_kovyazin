@@ -1,0 +1,17 @@
+# запустить кластер
+minikube start
+kubectl create deployment hello-minikube --image=kicbase/echo-server:1.0
+kubectl get services hello-minikube
+kubectl port-forward service/hello-minikube 7080:8080
+# создать под
+kubectl apply -f  <deployment_label_name> 
+# показать состояние подов
+kubectl get pods
+# показать состояние  одного пода
+kubectl describe pod <deployment_label_name>
+# задать число реплик
+kubectl scale --replicas=<expected_replica_num> deployment <deployment_label_name> -n <namespace>
+# Погасить все поды
+kubectl delete all --all
+# Завершить работу определенного пода
+kubectl delete pod <deployment_label_name>

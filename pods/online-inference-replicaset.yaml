@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: online-inference-replicaset
+  labels:
+    app: mlp
+    tier: online-inference-replicaset
+spec:
+  # modify replicas according to your case
+  replicas: 3
+  selector:
+    matchLabels:
+      tier: online-inference-replicaset
+  template:
+    metadata:
+      labels:
+        tier: online-inference-replicaset
+    spec:
+      containers:
+      - name: mlp
+        image: krastykovyaz/ft_perceptron-app:0.0.1
+

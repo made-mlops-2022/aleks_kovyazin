@@ -1,0 +1,35 @@
+2022-11-09 06:59:29.017 | INFO     | source.net:import_layer:25 - Import layer Linear with params: {'in_feat': 30, 'out_feat': 200, 'lr': 0.001}
+2022-11-09 06:59:29.018 | INFO     | source.net:import_layer:25 - Import layer Relu with params: {}
+2022-11-09 06:59:29.018 | INFO     | source.net:import_layer:25 - Import layer Linear with params: {'in_feat': 200, 'out_feat': 200, 'lr': 0.001}
+2022-11-09 06:59:29.019 | INFO     | source.net:import_layer:25 - Import layer Relu with params: {}
+2022-11-09 06:59:29.019 | INFO     | source.net:import_layer:25 - Import layer Linear with params: {'in_feat': 200, 'out_feat': 200, 'lr': 0.001}
+2022-11-09 06:59:29.019 | INFO     | source.net:import_layer:25 - Import layer Relu with params: {}
+2022-11-09 06:59:29.019 | INFO     | source.net:import_layer:25 - Import layer Linear with params: {'in_feat': 200, 'out_feat': 2, 'lr': 0.001}
+2022-11-09 06:59:29.021 | ERROR    | source.net:scale_transform:115 - Scaler transform error ValueError('X has 13 features, but MinMaxScaler is expecting 30 features as input.')
+2022-11-09 07:06:47.741 | INFO     | __main__:train:63 - /Users/aleksandr/Desktop/mlops_project_perceptron/app/ml_project/data/data.csv
+2022-11-09 07:06:47.782 | INFO     | __main__:train:83 - Epoch 1/10 --- loss: 0.692 --- val_loss 0.692
+2022-11-09 07:06:47.802 | INFO     | __main__:train:83 - Epoch 2/10 --- loss: 0.69 --- val_loss 0.69
+2022-11-09 07:06:47.824 | INFO     | __main__:train:83 - Epoch 3/10 --- loss: 0.688 --- val_loss 0.688
+2022-11-09 07:06:47.846 | INFO     | __main__:train:83 - Epoch 4/10 --- loss: 0.687 --- val_loss 0.686
+2022-11-09 07:06:47.866 | INFO     | __main__:train:83 - Epoch 5/10 --- loss: 0.685 --- val_loss 0.685
+2022-11-09 07:06:47.887 | INFO     | __main__:train:83 - Epoch 6/10 --- loss: 0.684 --- val_loss 0.683
+2022-11-09 07:06:47.907 | INFO     | __main__:train:83 - Epoch 7/10 --- loss: 0.682 --- val_loss 0.681
+2022-11-09 07:06:47.930 | INFO     | __main__:train:83 - Epoch 8/10 --- loss: 0.68 --- val_loss 0.679
+2022-11-09 07:06:47.951 | INFO     | __main__:train:83 - Epoch 9/10 --- loss: 0.679 --- val_loss 0.677
+2022-11-09 07:06:47.971 | INFO     | __main__:train:83 - Epoch 10/10 --- loss: 0.677 --- val_loss 0.676
+2022-11-09 07:06:47.971 | INFO     | source.net:use_best_weights:190 - Best weight loaded
+2022-11-09 07:06:47.971 | INFO     | source.net:export_layer:30 - Export layer Linear
+2022-11-09 07:06:47.971 | INFO     | source.net:export_layer:30 - Export layer Relu
+2022-11-09 07:06:47.971 | INFO     | source.net:export_layer:30 - Export layer Linear
+2022-11-09 07:06:47.972 | INFO     | source.net:export_layer:30 - Export layer Relu
+2022-11-09 07:06:47.972 | INFO     | source.net:export_layer:30 - Export layer Linear
+2022-11-09 07:06:47.973 | INFO     | source.net:export_layer:30 - Export layer Relu
+2022-11-09 07:06:47.973 | INFO     | source.net:export_layer:30 - Export layer Linear
+2022-11-09 07:07:05.463 | INFO     | source.net:import_layer:25 - Import layer Linear with params: {'in_feat': 13, 'out_feat': 200, 'lr': 0.001}
+2022-11-09 07:07:05.464 | INFO     | source.net:import_layer:25 - Import layer Relu with params: {}
+2022-11-09 07:07:05.464 | INFO     | source.net:import_layer:25 - Import layer Linear with params: {'in_feat': 200, 'out_feat': 200, 'lr': 0.001}
+2022-11-09 07:07:05.465 | INFO     | source.net:import_layer:25 - Import layer Relu with params: {}
+2022-11-09 07:07:05.465 | INFO     | source.net:import_layer:25 - Import layer Linear with params: {'in_feat': 200, 'out_feat': 200, 'lr': 0.001}
+2022-11-09 07:07:05.466 | INFO     | source.net:import_layer:25 - Import layer Relu with params: {}
+2022-11-09 07:07:05.466 | INFO     | source.net:import_layer:25 - Import layer Linear with params: {'in_feat': 200, 'out_feat': 2, 'lr': 0.001}
+2022-11-09 07:07:05.467 | INFO     | __main__:predict:109 - Test loss: 0.69

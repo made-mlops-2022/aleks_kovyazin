@@ -1,0 +1,27 @@
+apiVersion: v1
+
+kind: Pod
+
+metadata:
+
+  name: online-inference-pod-resources
+
+spec:
+
+  containers:
+
+  - name: mlp
+
+    image: krastykovyaz/ft_perceptron-app:0.0.1
+
+    ports:
+
+    - containerPort: 80
+
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "250m"
+      limits:
+        memory: "128Mi"
+        cpu: "500m"

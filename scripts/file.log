@@ -1,0 +1,2 @@
+2022-10-20 19:43:48.734 | INFO     | __main__:train:60 - data/data.csv
+2022-10-20 19:43:48.735 | CRITICAL | __main__:train:63 - Error read train dataset (FileNotFoundError(2, 'No such file or directory'))

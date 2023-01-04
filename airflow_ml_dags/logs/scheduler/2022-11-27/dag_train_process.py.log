@@ -1,0 +1,155 @@
+[2022-11-27T19:24:31.194+0000] {processor.py:154} INFO - Started process (PID=42) to work on /opt/airflow/dags/dag_train_process.py
+[2022-11-27T19:24:31.208+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag_train_process.py for tasks to queue
+[2022-11-27T19:24:31.212+0000] {logging_mixin.py:137} INFO - [2022-11-27T19:24:31.212+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag_train_process.py
+[2022-11-27T19:24:42.450+0000] {logging_mixin.py:137} INFO - [2022-11-27T19:24:42.448+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-e8xo1_03 because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-11-27T19:24:44.356+0000] {logging_mixin.py:137} INFO - [2022-11-27T19:24:44.321+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-11-27T19:24:47.149+0000] {processor.py:766} INFO - DAG(s) dict_keys(['data_preparator_dag']) retrieved from /opt/airflow/dags/dag_train_process.py
+[2022-11-27T19:24:47.349+0000] {logging_mixin.py:137} INFO - [2022-11-27T19:24:47.348+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2022-11-27T19:24:47.418+0000] {logging_mixin.py:137} INFO - [2022-11-27T19:24:47.418+0000] {dag.py:3340} INFO - Setting next_dagrun for data_preparator_dag to 2022-11-27T00:00:00+00:00, run_after=2022-12-04T00:00:00+00:00
+[2022-11-27T19:24:47.507+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag_train_process.py took 16.332 seconds
+[2022-11-27T19:25:18.373+0000] {processor.py:154} INFO - Started process (PID=84) to work on /opt/airflow/dags/dag_train_process.py
+[2022-11-27T19:25:18.399+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag_train_process.py for tasks to queue
+[2022-11-27T19:25:18.444+0000] {logging_mixin.py:137} INFO - [2022-11-27T19:25:18.442+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag_train_process.py
+[2022-11-27T19:25:57.913+0000] {logging_mixin.py:137} INFO - [2022-11-27T19:25:57.890+0000] {timeout.py:68} ERROR - Process timed out, PID: 84
+[2022-11-27T19:25:57.990+0000] {logging_mixin.py:137} INFO - [2022-11-27T19:25:57.919+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/dag_train_process.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_train_process.py", line 4, in <module>
+    from packages.training_process import prepare_data, splitter, trainer, plotter
+  File "/opt/airflow/dags/packages/training_process.py", line 2, in <module>
+    import pandas as pd
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/__init__.py", line 50, in <module>
+    from pandas.core.api import (
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/api.py", line 48, in <module>
+    from pandas.core.groupby import (
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/groupby/__init__.py", line 1, in <module>
+    from pandas.core.groupby.generic import (
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/groupby/generic.py", line 73, in <module>
+    from pandas.core.frame import DataFrame
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/frame.py", line 205, in <module>
+    from pandas.io.formats.info import (
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/formats/info.py", line 403, in <module>
+    class TableBuilderAbstract(ABC):
+  File "/usr/local/lib/python3.7/abc.py", line 127, in __new__
+    _abc_init(cls)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/dag_train_process.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.4.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.4.3/best-practices.html#reducing-dag-complexity, PID: 84
+[2022-11-27T19:25:58.015+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_train_process.py
+[2022-11-27T19:25:58.099+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag_train_process.py took 39.899 seconds
+[2022-11-27T19:26:29.831+0000] {processor.py:154} INFO - Started process (PID=115) to work on /opt/airflow/dags/dag_train_process.py
+[2022-11-27T19:26:29.840+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag_train_process.py for tasks to queue
+[2022-11-27T19:26:29.842+0000] {logging_mixin.py:137} INFO - [2022-11-27T19:26:29.842+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag_train_process.py
+[2022-11-27T19:26:51.335+0000] {logging_mixin.py:137} INFO - [2022-11-27T19:26:51.334+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-0oisyx1n because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-11-27T19:26:51.583+0000] {logging_mixin.py:137} INFO - [2022-11-27T19:26:51.583+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-11-27T19:26:51.988+0000] {processor.py:766} INFO - DAG(s) dict_keys(['data_preparator_dag']) retrieved from /opt/airflow/dags/dag_train_process.py
+[2022-11-27T19:26:52.114+0000] {logging_mixin.py:137} INFO - [2022-11-27T19:26:52.113+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2022-11-27T19:26:52.158+0000] {logging_mixin.py:137} INFO - [2022-11-27T19:26:52.158+0000] {dag.py:3340} INFO - Setting next_dagrun for data_preparator_dag to 2022-11-27T00:00:00+00:00, run_after=2022-12-04T00:00:00+00:00
+[2022-11-27T19:26:52.227+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag_train_process.py took 22.410 seconds
+[2022-11-27T19:27:23.677+0000] {processor.py:154} INFO - Started process (PID=151) to work on /opt/airflow/dags/dag_train_process.py
+[2022-11-27T19:27:23.775+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag_train_process.py for tasks to queue
+[2022-11-27T19:27:24.115+0000] {logging_mixin.py:137} INFO - [2022-11-27T19:27:24.077+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag_train_process.py
+[2022-11-27T19:27:55.610+0000] {logging_mixin.py:137} INFO - [2022-11-27T19:27:55.577+0000] {timeout.py:68} ERROR - Process timed out, PID: 151
+[2022-11-27T19:27:56.391+0000] {logging_mixin.py:137} INFO - [2022-11-27T19:27:55.758+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/dag_train_process.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_train_process.py", line 4, in <module>
+    from packages.training_process import prepare_data, splitter, trainer, plotter
+  File "/opt/airflow/dags/packages/training_process.py", line 1, in <module>
+    from sklearn.model_selection import train_test_split
+  File "/home/airflow/.local/lib/python3.7/site-packages/sklearn/__init__.py", line 82, in <module>
+    from .base import clone
+  File "/home/airflow/.local/lib/python3.7/site-packages/sklearn/base.py", line 17, in <module>
+    from .utils import _IS_32BIT
+  File "/home/airflow/.local/lib/python3.7/site-packages/sklearn/utils/__init__.py", line 28, in <module>
+    from .fixes import np_version, parse_version
+  File "/home/airflow/.local/lib/python3.7/site-packages/sklearn/utils/fixes.py", line 20, in <module>
+    import scipy.stats
+  File "/home/airflow/.local/lib/python3.7/site-packages/scipy/stats/__init__.py", line 441, in <module>
+    from .stats import *
+  File "/home/airflow/.local/lib/python3.7/site-packages/scipy/stats/stats.py", line 37, in <module>
+    from scipy.spatial.distance import cdist
+  File "/home/airflow/.local/lib/python3.7/site-packages/scipy/spatial/__init__.py", line 96, in <module>
+    from .kdtree import *
+  File "/home/airflow/.local/lib/python3.7/site-packages/scipy/spatial/kdtree.py", line 189, in <module>
+    class KDTree(cKDTree):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/dag_train_process.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.4.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.4.3/best-practices.html#reducing-dag-complexity, PID: 151
+[2022-11-27T19:27:56.728+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_train_process.py
+[2022-11-27T19:27:59.404+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag_train_process.py took 36.187 seconds
+[2022-11-27T19:28:40.421+0000] {processor.py:154} INFO - Started process (PID=180) to work on /opt/airflow/dags/dag_train_process.py
+[2022-11-27T19:28:40.597+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag_train_process.py for tasks to queue
+[2022-11-27T19:28:40.875+0000] {logging_mixin.py:137} INFO - [2022-11-27T19:28:40.819+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag_train_process.py
+[2022-11-27T19:29:16.701+0000] {logging_mixin.py:137} INFO - [2022-11-27T19:29:16.589+0000] {timeout.py:68} ERROR - Process timed out, PID: 180
+[2022-11-27T19:29:18.415+0000] {logging_mixin.py:137} INFO - [2022-11-27T19:29:16.977+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/dag_train_process.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_train_process.py", line 4, in <module>
+    from packages.training_process import prepare_data, splitter, trainer, plotter
+  File "/opt/airflow/dags/packages/training_process.py", line 1, in <module>
+    from sklearn.model_selection import train_test_split
+  File "/home/airflow/.local/lib/python3.7/site-packages/sklearn/__init__.py", line 82, in <module>
+    from .base import clone
+  File "/home/airflow/.local/lib/python3.7/site-packages/sklearn/base.py", line 17, in <module>
+    from .utils import _IS_32BIT
+  File "/home/airflow/.local/lib/python3.7/site-packages/sklearn/utils/__init__.py", line 21, in <module>
+    from scipy.sparse import issparse
+  File "/home/airflow/.local/lib/python3.7/site-packages/scipy/__init__.py", line 136, in <module>
+    from . import _distributor_init
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 818, in get_code
+  File "<frozen importlib._bootstrap_external>", line 917, in get_data
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/dag_train_process.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.4.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.4.3/best-practices.html#reducing-dag-complexity, PID: 180
+[2022-11-27T19:29:22.983+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_train_process.py
+[2022-11-27T19:30:14.364+0000] {processor.py:154} INFO - Started process (PID=221) to work on /opt/airflow/dags/dag_train_process.py
+[2022-11-27T19:30:14.907+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag_train_process.py for tasks to queue
+[2022-11-27T19:30:15.404+0000] {logging_mixin.py:137} INFO - [2022-11-27T19:30:15.308+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag_train_process.py
+[2022-11-27T19:30:48.013+0000] {logging_mixin.py:137} INFO - [2022-11-27T19:30:47.554+0000] {timeout.py:68} ERROR - Process timed out, PID: 221
+[2022-11-27T19:30:53.002+0000] {logging_mixin.py:137} INFO - [2022-11-27T19:30:48.241+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/dag_train_process.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_train_process.py", line 4, in <module>
+    from packages.training_process import prepare_data, splitter, trainer, plotter
+  File "/opt/airflow/dags/packages/training_process.py", line 1, in <module>
+    from sklearn.model_selection import train_test_split
+  File "/home/airflow/.local/lib/python3.7/site-packages/sklearn/__init__.py", line 81, in <module>
+    from . import __check_build  # noqa: F401
+  File "<frozen importlib._bootstrap>", line 200, in _lock_unlock_module
+  File "<frozen importlib._bootstrap>", line 163, in _get_module_lock
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/dag_train_process.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.4.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.4.3/best-practices.html#reducing-dag-complexity, PID: 221
+[2022-11-27T19:30:59.131+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_train_process.py
+[2022-11-27T19:33:06.396+0000] {processor.py:154} INFO - Started process (PID=246) to work on /opt/airflow/dags/dag_train_process.py
+[2022-11-27T19:33:07.468+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag_train_process.py for tasks to queue
+[2022-11-27T19:33:07.887+0000] {logging_mixin.py:137} INFO - [2022-11-27T19:33:07.799+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag_train_process.py
